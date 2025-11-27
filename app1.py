@@ -18,6 +18,12 @@ st.write(score)
 
 st.radio("性別を選択してください",["男性","女性"])
 
+list = [
+  {"latitude":35.05, "longitude":135.76}, #デフォルト現在地（植物園）
+  {"latitude":35.04, "longitude":135.75}, #紫明小学校
+]
+st.map(list)
+
 camera = st.camera_input("写真を撮影します！")
 if camera:
     st.image(camera, caption="写真", use_column_width=True)
